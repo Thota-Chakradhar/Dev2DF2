@@ -1,0 +1,9 @@
+{
+	"name": "dev2df2",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e795d40d-b39a-4c94-9277-a28e2a577ab2",
+		"tenantId": "e401b94a-3f04-43a7-b132-c1408093d776"
+	}
+}
