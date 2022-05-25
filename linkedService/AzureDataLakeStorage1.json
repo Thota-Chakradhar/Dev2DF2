@@ -12,7 +12,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "@{linkedService().keyvault_loc}",
+			"url": "https://dev2gen2.dfs.core.windows.net",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
@@ -20,7 +20,7 @@
 					"type": "LinkedServiceReference"
 				},
 				"secretName": {
-					"value": "@linkedService().Secret",
+					"value": "gen2",
 					"type": "Expression"
 				}
 			}
