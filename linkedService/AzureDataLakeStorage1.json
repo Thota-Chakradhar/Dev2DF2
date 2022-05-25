@@ -1,17 +1,28 @@
 {
 	"name": "AzureDataLakeStorage1",
 	"properties": {
+		"parameters": {
+			"Secret": {
+				"type": "String"
+			},
+			"keyvault_loc": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://dev2gen2.dfs.core.windows.net",
+			"url": "@{linkedService().keyvault_loc}",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "gen2"
+				"secretName": {
+					"value": "@linkedService().Secret",
+					"type": "Expression"
+				}
 			}
 		}
 	},
